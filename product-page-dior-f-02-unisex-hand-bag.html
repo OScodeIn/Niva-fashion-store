@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NIVA | Details</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./dest/app.css">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./src/images/Asset 1.png" alt="logo img">
+                        </a>
+                    </div>
+                    <div class="left-nav-items">
+                        <div class="nav-items mobile-nav-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                              </svg>
+                        </div>
+                        <div class="nav-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                              </svg>
+                        </div>
+                        <div class="nav-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                              </svg>
+                        </div>
+                        <div class="nav-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list m-menu-bar" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="mobile-sidebar">
+                        <div class="m-sidebar-content">
+                            <div class="m-sidebar-top">
+                                <button class="m-toggle-mode" type="button" id="modeToggleBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-moon m-moon" id="moonIcon" viewBox="0 0 16 16">
+                                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                                      </svg>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-sun m-sun" id="sunIcon" viewBox="0 0 16 16">
+                                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                                      </svg>
+                                </button>
+                                <button class="close-sidebar-btn" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                      </svg>
+                                </button>
+                            </div>
+                            <div class="m-sidebar-middle">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle m-person" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                      </svg>
+                                </a>
+                                <p><span><a href="./login.html" class="side-link">login</a></span><span>/ <a href="./register.html" class="side-link">signup</a></span></p>
+                            </div>
+                            <div class="m-sidebar-body">
+                               <a class="m-lists" href="./index.html">Home</a>
+                               <a class="m-lists" href="./mens.html">Men's collection</a>
+                               <a class="m-lists" href="./womens.html">Women's collection</a>
+                               <a class="m-lists" href="./accessories.html">Accessories</a>
+                               <a class="m-lists" href="#">Faqs</a>
+                               <a class="m-lists" href="./aboutUs.html">About us</a>
+                               <a class="m-lists" href="#">Contact us</a>
+                               <a class="m-lists" href="#">Country/region</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-search-panel">
+                        <div class="mobile-search-panel-close-bar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                              </svg>
+                        </div>
+                        <div class="m-search-panel-top">
+                            <div class="m-search-panel-wrap">
+                                <div class="m-search-panel-search-bar">
+                                    <input type="search" class="m-search-input" id="search-input" name="m-search" autocomplete="none" placeholder="search for products by name or category">
+                                    <div class="m-search-clear-input-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                          </svg>
+                                    </div>
+                                    <div class="m-search-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-search-panel-hot-search-bar">
+                                <p>Hot searches</p>
+                                <div class="m-hot-search-wrap">
+                                    <p>Jean</p>
+                                    <p>Jacket</p>
+                                    <p>Trouser</p>
+                                    <p>Jumpsuit</p>
+                                    <p>Men</p>
+                                    <p>Shoes</p>
+                                    <p>Women</p>
+                                    <p>Wristwatch</p>
+                                </div>
+                            </div>
+                            <div class="m-search-result-bar search-bar-content">
+                                <div class="search-bar-product-content">
+                                    <div class="product s-product-box" data-price="44" data-popularity="5" data-name="Product R">
+                                        <a href="./product-page-rumi-men's-trouser.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1584865288642-42078afe6942_compress35.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Rumi Men's Trouser - Black" class="item-name">Rumi Men's Trouser - Black</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;44,000</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="47" data-popularity="5" data-name="Product N">
+                                        <a href="./product-page-nate's-vintage-shirt.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1605547781680-606148f1008c_compress82.jpg" alt=""></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Nate's Vintage T-shirt - Men's" class="item-name">Nate's Vintage T-shirt - Men's</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;47,800</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="44" data-popularity="4" data-name="Product L">
+                                        <a href="./product-page-lia-men's-suit.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1619208382871-96f4d45bc840_compress29.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Lia Men's Suit Set F-8 Collection" class="item-name">Lia Men's Suit Set F-8 Collection</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;122,000</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="18" data-popularity="2" data-name="Product F">
+                                        <a href="./product-page-friday-tee-milky-grey.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1591357037205-166318b51afd_compress18.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Friday Tee - Milky-grey" class="item-name">Friday Tee - Milky-grey</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;18,000</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="94" data-popularity="1" data-name="Product M">
+                                        <div class="s-product-img"><img src="./src/images/mens_1006_holder.png" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Men's suit F-8 collection" class="item-name">Men's suit F-8 collection</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;94,350</p>
+                                        </div>
+                                    </div>
+                                    <div class="product s-product-box" data-price="27" data-popularity="4" data-name="Product D">
+                                        <a href="./product-page-downtown-msn's-hoodie.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/Dowtown-Men's-Graphic-Hoodie.jpeg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Downtown Men's Hoodie - Dark-grey" class="item-name">Downtown Men's Hoodie - Dark-grey</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;27,200</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="27" data-popularity="3" data-name="Product R">
+                                        <a href="./Product-page-rumi-f-12-men-collection-friday-vibe-set.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/20221209_200959.png" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Rumi F-12 men's Collection Friday Vibe Set - Brown" class="item-name">Rumi F-12 men's Collection Friday Vibe Set - Brown</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;27,200</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="36" data-popularity="5" data-name="Product L">
+                                        <a href="./Product-page-lia-men's-jean-trouser.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/image.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Lia Men's Jean Trouser - Black" class="item-name">Lia Men's Jean Trouser - Black</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;36,800</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="84" data-popularity="5" data-name="Product A">
+                                        <a href="./product-page-air-max-90-men-shoe.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/air-max-90-mens-shoes-6n3vKB.jpeg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Air-max 90 Men's Shoe" class="item-name">Air-max 90 Men's Shoe</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;84,700</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="107" data-popularity="5" data-name="Product R">
+                                        <a href="./Product-page-rs-x-women's-sneakers.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/RS-X-Faded-Women's-Sneakers (1).jpeg" alt=""></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="RS-X-Faded Women's Sneakers" class="item-name">RS-X-Faded Women's Sneakers</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;107,500</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="139" data-popularity="4" data-name="Product D">
+                                        <a href="./product-page-dior-grained-skin-sandal-f-8-collection.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/3SA116ZSD_H900_T47_compress60.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Dior Grain-skin Cover Sandals F-8 Collection" class="item-name">Dior Grain-skin Cover Sandals F-8 Collection</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;139,000</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="98" data-popularity="5" data-name="Product D">
+                                        <a href="./product-page-dior-f-02-unisex-hand-bag.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/1ADPO093NFS_H62Q_TU_compress26.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Dior F-02 Unisex Handbag - Grey" class="item-name">Dior F-02 Unisex Handbag - Grey</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;98,300</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="398" data-popularity="4" data-name="Product M">
+                                        <a href="./product-page-Moises-Ribeiro-Handbag.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/pexels-moises-ribeiro-11031128.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Moises Ribeiro Handbag" class="item-name">Moises Ribeiro Handbag</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;398,000</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="203" data-popularity="5" data-name="Product R">
+                                        <a href="./product-page-Rotelle-N-108X-R1-Watch-Leather-Brown.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1557531365-e8b22d93dbd0_compress92.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Rotelle N-108X R1 Watch - Leather Brown" class="item-name">Rotelle N-108X R1 Watch - Leather Brown</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;203,200</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="328" data-popularity="5" data-name="Product D">
+                                        <a href="./product-page-Duvalle-Rox-High-heel.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1515347619252-60a4bf4fff4f_compress7.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Duvalle Rox High-heel" class="item-name">Duvalle Rox High-heel</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;328,700</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                                    <div class="product s-product-box" data-price="12" data-popularity="2" data-name="Product W">
+                                        <a href="./product-page-Weekend-Vibes-Head-warmer.html" class="product-link">
+                                            <div class="s-product-img"><img src="./src/images/photo-1576871337632-b9aef4c17ab9_compress35.jpg" alt="img"></div>
+                                        <div class="s-product-name-box">
+                                            <p data-productName="Weekend Vibes Head-warmer" class="item-name">Weekend Vibes Head-warmer</p>
+                                        </div>
+                                        <div class="s-product-btm">
+                                            <p class="s-product-price">&#8358;12,400</p>
+                                        </div>
+                                        </a>
+                                    </div>
+                    <div class="s-product-box product" data-price="47" data-popularity="2" data-name="Product F">
+                        <a href="./product-page-Charcoal_P_0259_JK" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/09-16-20Studio1_JP_CP_15-11-44_35_ST7199_Charcoal_P_0259_JK_468x@2x_compress21.jpg" alt="img"></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Faux weekend silk set - Charcoal" class="item-name">Faux weekend silk set - Charcoal</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;47,400</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="67" data-popularity="4" data-name="Product W">
+                        <a href="./product-page-women's-body-suit.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/20210204_192500.jpg" alt=""></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Women's Body Suit - Black" class="item-name">Women's Body Suit - Black</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;67,800</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="44" data-popularity="2" data-name="Product D">
+                        <a href="./product-page-dark-grey-shoulderless-blouse.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/10-10-19_Studio_3_JP_ES_13-25-22_17__ZDST2226_Black_P_0525_JD_468x@2x_compress52.jpg" alt="img"></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Dark-grey Shoulder-less Blouse" class="item-name">Dark-grey Shoulder-less Blouse</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;44,650</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="102" data-popularity="4" data-name="Product K">
+                        <a href="./product-page-kimi-gold-sequin-gown.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1572123748107-b635b10e6a52_compress51.jpg" alt="img"></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Kimi Gold Sequin Gown" class="item-name">Kimi Gold Sequin Gown</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;102,200</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="94" data-popularity="2" data-name="Product F">
+                        <a href="./product-page-ferri-wine-gown.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1572804013309-59a88b7e92f1_compress77.jpg" alt="img"></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Ferri Wine Gown F-8 Collection" class="item-name">Ferri Wine Gown F-8 Collection</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;94,250</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="24" data-popularity="1" data-name="Product A">
+                        <a href="./product-page-ave-sun-hat.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1582791694770-cbdc9dda338f_compress38.jpg" alt="img"></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Ave Sun Hat - Gold Yellow" class="item-name">Ave Sun Hat - Gold Yellow</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;24,000</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="33" data-popularity="3" data-name="Product R">
+                        <a href="./product-page-rumi-friday-tee.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1626948683848-a20d8b769e3c_compress61.jpg" alt=""></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Rumi Friday Tee - Dark-grey" class="item-name">Rumi Friday Tee - Dark-grey</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;33,400</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="83" data-popularity="4" data-name="Product S">
+                        <a href="./product-page-sumi-eyes-on-me-bra-top.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1584998316204-3b1e3b1895ae_compress58.jpg" alt=""></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Sumi Eyes On Me Bra Top, Pant Set - Light Grey" class="item-name">Sumi Eyes On Me Bra Top, Pant Set - Light Grey</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;83,100</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="136" data-popularity="5" data-name="Product I">
+                        <a href="./porduct-page-in-the-aftermath-coated-jacket.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1539109136881-3be0616acf4b.jpeg" alt=""></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="In The Aftermath Coated Muni Denim Jacket - Light-blue" class="item-name">In The Aftermath Coated Muni Denim Jacket - Light-blue</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;136,000</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="s-product-box product" data-price="66" data-popularity="5" data-name="Product L">
+                        <a href="./product-page-lia-white-tee.html" class="product-link">
+                            <div class="s-product-img"><img src="./src/images/photo-1521577352947-9bb58764b69a_compress43.jpg" alt=""></div>
+                        <div class="s-product-name-box">
+                            <p data-productName="Lia White Tee With Striped Halfway Pant - Mica Collection" class="item-name">Lia White Tee With Striped Halfway Pant - Mica Collection</p>
+                        </div>
+                        <div class="s-product-btm">
+                            <p class="s-product-price">&#8358;66,000</p>
+                        </div>
+                        </a>
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+        </header>
+        <section class="product-datails-container">
+            <div class="product-details-content-container">
+                <div class="product-section p-section-one">
+                    <div class="p-product-img-box">
+                        <img src="./src/images/1ADPO093NFS_H62Q_TU_compress26.jpg" alt="product">
+                    </div>
+                    <div class="p-product-titles-box">
+                        <div class="titles t-one"><p class="p-product-name">Dior F-02 Unisex Handbag - Grey</p></div>
+                        <div class="titles t-two">
+                            <p class="p-price-tag">&#8358;98,300</p>
+                            <p class="p-reviews-txt">No reviews yet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-section p-section-two">
+                    <div class="p-sizes-box">
+                        <p class="p-size-head">Size</p>
+                        <div class="p-sizes-box-display-wrap">
+                            <button type="button" class="p-sizes-btn">L</button>
+                            <button type="button" class="p-sizes-btn">XL</button>
+                        </div>
+                    </div>
+                    <div class="p-add-to-cart-box">
+                        <button type="button" class="p-add-to-cart-btn">Add to bag</button>
+                    </div>
+                    <div class="p-product-details-wrap">
+                        <p class="p-product-details-head">Product description</p>
+                        <ul class="p-product-details-txt-content">
+                            <li class="p-product-details-txt">Available in Grey only</li>
+                            <li class="p-product-details-txt">Tracked-darts</li>
+                            <li class="p-product-details-txt">Air-holes</li>
+                            <li class="p-product-details-txt">Side zippers</li>
+                            <li class="p-product-details-txt">Imported</li>
+                        </ul>
+                    </div>
+                    <div class="p-delivery-status-box">
+                        <p class="p-delivery-status-txt">Delivery:</p>
+                        <p class="delivery-span-txt">Only available in Lagos and Abuja.</p>
+                    </div>
+                    <div class="return-policy-box">
+                        <p>You can find the information about our <span>Return Policy Here.</span></p>
+                    </div>
+                    <div class="suggestions-box-wrap">
+                        <p class="suggestions-header">You might also like</p>
+                        <div class="suggestions-content-wrap">
+                            <div class="h-product-content" id="product-container">
+                                <div class="h-product-box product" data-price="104" data-popularity="5" data-name="Product D">
+                                    <div class="h-product-img"><img src="./src/images/3SA117ZSG_H900_T47_compress27.jpg" alt="img"></div>
+                                    <div class="h-product-name-box">
+                                        <p>Dior sandals F12 - black</p>
+                                    </div>
+                                    <div class="h-product-btm">
+                                        <p class="h-product-price">&#8358;104,000</p>
+                                        <button type="submit" id="add-to-cart" class="add-to-cart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
+                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                          </svg></button>
+                                    </div>
+                                </div>
+                                <div class="h-product-box product" data-price="67" data-popularity="4" data-name="Product W">
+                                    <div class="h-product-img"><img src="./src/images/20210204_192500.jpg" alt=""></div>
+                                    <div class="h-product-name-box">
+                                        <p>Women's body suit - black</p>
+                                    </div>
+                                    <div class="h-product-btm">
+                                        <p class="h-product-price">&#8358;67,800</p>
+                                        <button type="submit" id="add-to-cart" class="add-to-cart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
+                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                          </svg></button>
+                                    </div>
+                                </div>
+                                <div class="h-product-box product" data-price="44" data-popularity="2" data-name="Product D">
+                                    <div class="h-product-img"><img src="./src/images/10-10-19_Studio_3_JP_ES_13-25-22_17__ZDST2226_Black_P_0525_JD_468x@2x_compress52.jpg" alt="img"></div>
+                                    <div class="h-product-name-box">
+                                        <p>Dark-grey shoulder-less blouse</p>
+                                    </div>
+                                    <div class="h-product-btm">
+                                        <p class="h-product-price">&#8358;44,650</p>
+                                        <button type="submit" id="add-to-cart" class="add-to-cart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
+                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                          </svg></button>
+                                    </div>
+                                </div>
+                                <div class="h-product-box product" data-price="658" data-popularity="5" data-name="Product L">
+                                    <div class="h-product-img"><img src="./src/images/photo-1591348278863-a8fb3887e2aa_compress1.jpg" alt="img"></div>
+                                    <div class="h-product-name-box">
+                                        <p>Louis vuitton escarv-silver <i class="fa fa-id-badge" aria-hidden="true"></i></p>
+                                    </div>
+                                    <div class="h-product-btm">
+                                        <p class="h-product-price">&#8358;658,000</p>
+                                        <button type="submit" id="add-to-cart" class="add-to-cart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
+                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                          </svg></button>
+                                    </div>
+                                </div>
+                                <div class="h-product-box product" data-price="94" data-popularity="1" data-name="Product M">
+                                    <div class="h-product-img"><img src="./src/images/mens_1006_holder.png" alt="img"></div>
+                                    <div class="h-product-name-box">
+                                        <p>Men's suit F-8 collection</p>
+                                    </div>
+                                    <div class="h-product-btm">
+                                        <p class="h-product-price">&#8358;94,350</p>
+                                        <button type="submit" id="add-to-cart" class="add-to-cart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
+                                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                          </svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-group-box footer-group-box-one">
+                    <div class="footer-liner">
+                        <div class="f-newsletter-box">
+                            <p class="f-news-txt-one">-  Newsletter</p>
+                            <div class="news-email-box">
+                                <input type="email" placeholder="Email address" aria-autocomplete="none" aria-required="false">
+                            </div>
+                            <p class="f-news-txt-two">By signing up, you agree to receive daily updates from NIVA.</p>
+                        </div>
+                    </div>
+                    <div class="footer-liner">
+                        <div class="f-address-box">
+                            <p class="f-address-txt">-  Address: <span>Wuse, zone 2, Ademola Adetokunbo crescent, Abuja.</span></p>
+                        </div>
+                    </div>
+                    <div class="footer-liner">
+                        <div class="f-contact-box">
+                            <p class="f-contact-txt">-  Contact: <span>+234 90-823-34568, +234 81-235-78453, +44-2345-4798-01</span></p>
+                        </div>
+                    </div>
+                    <div class="footer-liner">
+                        <div class="f-socials-box">
+                            <p class="f-socials-txt-one">- Socials</p>
+                            <div class="f-socials-icons-wrap">
+                                <div class="f-socials-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-threads" viewBox="0 0 16 16">
+                                        <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
+                                      </svg>
+                                </div>
+                                <div class="f-socials-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                      </svg>
+                                </div>
+                                <div class="f-socials-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                      </svg>
+                                </div>
+                                <div class="f-socials-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                      </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-group-box footer-group-box-two">
+                    <div class="footer-dropdown" id="footer-dropdown1">
+                        <button class="footer-dropdown-btn">Get help</button>
+                        <div class="footer-dropdown-content">
+                            <a href="#">Help center</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Shipping info</a>
+                            <a href="#">Track order</a>
+                        </div>
+                    </div>
+                    <div class="footer-dropdown" id="footer-dropdown2">
+                        <button class="footer-dropdown-btn">NIVA STORE</button>
+                        <div class="footer-dropdown-content">
+                            <a href="#">Legal terms</a>
+                            <a href="#">Privacy notice</a>
+                            <a href="#">Terms and conditions</a>
+                            <a href="#">Cookie management</a>
+                        </div>
+                    </div>
+                    <div class="footer-dropdown" id="footer-dropdown3">
+                        <button class="footer-dropdown-btn">Services</button>
+                        <div class="footer-dropdown-content">
+                            <a href="#">Shipping</a>
+                            <a href="#">Find a boutique</a>
+                            <a href="#">Delivery</a>
+                            <a href="#">Affiliates</a>
+                        </div>
+                    </div>
+                    <div class="footer-dropdown" id="footer-dropdown4">
+                        <button class="footer-dropdown-btn">Map</button>
+                        <div class="footer-dropdown-content">
+                            <a href="./index.html">Home</a>
+                            <a href="./mens.html">Men's collection</a>
+                            <a href="./womens.html">Women's collection</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-end-txt">
+                <p>&copy 2024, NIVA FASHION STORE, LLC ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+        <script src="./dest/script.js"></script>
+    </body>
+</html>
